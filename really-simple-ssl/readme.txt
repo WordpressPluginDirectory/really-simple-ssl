@@ -1,77 +1,102 @@
 === Really Simple SSL ===
 Contributors: RogierLankhorst, markwolters, hesseldejong, vicocotea, marcelsanting, janwoostendorp
 Donate link: https://www.paypal.me/reallysimplessl
-Tags: SSL, https, force SSL, mixed content, security, secure website, website security, TLS, secure socket layers, HSTS
+Tags: Security, SSL, https, HSTS, mixed content
 Requires at least: 5.9
 License: GPL2
 Tested up to: 6.5
-Requires PHP: 7.2
-Stable tag: 8.1.0
+Requires PHP: 7.4
+Stable tag: 8.1.1
 
-The easiest way to improve security! Leverage your SSL certificate and protect your website visitors.
+Easily improve site security with WordPress hardening, vulnerability detection and SSL certificate generation.
 
 == Description ==
-Really Simple SSL will automatically configure your website to use SSL to its fullest potential. Use extra security features to protect your website, and use our server health check to keep up-to-date.
 
-== Features ==
-* Easy SSL Migration: Takes your website to HTTPS in just one-click.
+=== Really simple, effective and lightweight WordPress Security ===
+Really Simple SSL is the most lightweight and easy-to-use security plugin for WordPress. It lays the foundation of your WordPress website's security by leveraging your SSL certificate, scanning for possible vulnerabilities and implementing essential WordPress hardening features.
+
+We believe that security should have the absolute minimum effect on website performance, user experience and maintainability. Therefore, Really Simple SSL is:
+
+* **Lightweight:** Every security feature is developed with a modular approach and with performance in mind. Disabled features won't load any redundant code.
+* **Easy-to-use:** 1-minute configuration with short onboarding setup.
+
+=== Security Features ===
+
+= Easy SSL Migration =
+Migrates your website to HTTPS and enforces SSL in just one click.
+
+* 301 redirect via PHP or .htaccess
+* Secure cookies
 * Let's Encrypt: Install an SSL Certificate if your hosting provider supports manual installation.
 * Server Health Check: Your server configuration is every bit as important for your website security.
-* WordPress Hardening: Tweak your configuration and keep WordPress fortified and safe by tackling its weaknesses.
-* Vulnerability Detection: Get notified when plugins, themes or core contain vulnerabilities and need appropriate action.
 
-== Improve Security with Really Simple SSL Pro ==
-* The Mixed Content Scan & Fixer. Detect files that are requested over HTTP and fix it. Both Front- and Back-end.
+= WordPress Hardening =
+Tweak your configuration and keep WordPress fortified and safe by tackling potential weaknesses.
 
-=== Security Headers ===
-These features mitigate the risk of clickjacking, cross-site-forgery attacks, stealing login credentials and malware among others.
+* Prevent code execution in the uploads folder
+* Prevent login feedback and disable user enumeration
+* Disable XML-RPC
+* Disable directory browsing
+* Username restrictions (block 'admin' and public names)
+* and much more..
 
-* Independent of your Server Configuration, works on Apache, LiteSpeed, NGINX etc.
-* Protect your website visitors with X-XSS Protection, X-Content-Type-Options, X-Frame-Options and Referrer Policy.
+= Vulnerability Detection =
+Get notified when plugins, themes or WP core contain vulnerabilities and need appropriate action.
+
+=== Improve Security with Really Simple SSL Pro ===
+[Protect your site with all essential security features by upgrading to Really Simple SSL Pro.](https://really-simple-ssl.com/)
+
+= Advanced SSL enforcement =
+* Mixed Content Scan & Fixer. Detect files that are requested over HTTP and fix it, both Front- and Back-end.
 * Enable HTTP Strict Transport Security and configure your site for the HSTS Preload list.
 
-=== Advanced Security ===
-Isolate your website from unnecessary file loading and exchanges with third-parties. Fully control your website and minimize risk of manipulation.
+= Security Headers =
+Security headers protect your site visitors against the risk of clickjacking, cross-site-forgery attacks, stealing login credentials and malware.
 
-* Designed for WordPress.
-* Control third-parties with the Content Security Policy - including Learning Mode.
-* Control browser features with the Permissions Policy e.g. geolocation, camera's and microphones.
-* Isolate information exchange between other websites. Fully control in- and outbound of data.
+* Independent of your Server Configuration, works on Apache, LiteSpeed, NGINX, etc.
+* Protect your website visitors with X-XSS Protection, X-Content-Type-Options, X-Frame-Options, a Referrer Policy and CORS headers.
+* Automatically generate your WordPress-tailored Content Security Policy.
 
-=== Advanced Hardening ===
+= Vulnerability Measures =
+When a vulnerability is detected in a plugin, theme or WordPress core you will get notified accordingly. With Vulnerability Measures, you can configure simple but effective measures to make sure that a critical vulnerability won't remain unattended.
+
+* Force update: An update process will be tried multiple times until it can be assumed development of a theme or plugin is abandoned. You will be notified during these steps.
+* Quarantine: When a plugin or theme can't be updated to solve a vulnerability, Really Simple SSL can quarantine the plugin.
+
+= Advanced Site Hardening =
 * Choose a custom login URL
-* Rename and randomize your database prefix.
+* Automated File Permissions check and fixer
+* Rename and randomize your database prefix
 * Change the debug.log file location to a non-public folder
-* Disable application passwords.
+* Disable application passwords
 * Control admin creation
-* Disable HTTP methods, reducing HTTP requests.
+* Disable HTTP methods, reducing HTTP requests
 
-=== Vulnerability Measures ===
-When a vulnerability is detected you will get notified accordingly. With Vulnerability Measures you can configure simple, but effective, measures to make sure a missed notification is not the end of the world.
+= Login Protection =
+Secure your website's login process and user accounts with powerful security measures.
 
-* Force update: An update process will be tried multiple times, until it can be assumed development of a theme or plugin is abandoned. You will be notified during these steps.
-* Quarantine: This extends the update process, which will run. When a plugin or theme can't be updated to solve a vulnerability, it will be disabled and deactivated. Use with caution!
+* Two-Step verification (Email login)
+* Enforce strong passwords and frequent password change
+* Limit Login Attempts
 
-== How does Really Simple SSL's HTTPS migration work? ==
-* The plugin will check for an existing SSL certificate. If you don't have one, you can generate one in the plugin. Depending on your hosting provider, the plugin can also install it for you or assist with instructions.
-* If needed,  It will handle known issues WordPress has with SSL. An example might be that your website uses a loadbalancer, proxy or headers are not passed to detect a certificate.
-* All incoming requests are redirected to HTTPS with a default 301 WordPress redirect. You can also choose a .htaccess redirect.
-* The Site URL and Home URL are changed to HTTPS.
-* Your insecure content is fixed by replacing all HTTP:// URLs with HTTPS://, except external hyperlinks, dynamically.
-* Cookies with PHP are set securely by setting them with the HTTPOnly flag.
+With Limit Login Attempts you can configure a threshold to temporarily or permanently block IP addresses or (non-existing) usernames. You can also throw a CAPTCHA after a failed login (hCaptcha or Google reCaptcha)
+
+= Access Control =
+* Restrict access to your site for specific regions.
+* Add specific IP addresses or IP ranges to the Blocklist or Allowlist.
 
 == Useful Links ==
 * [Documentation](https://really-simple-ssl.com/knowledge-base-overview/)
-* [SSL Definitions](https://really-simple-ssl.com/definitions/)
+* [Security Definitions](https://really-simple-ssl.com/definitions/)
 * [Translate Really Simple SSL](https://translate.wordpress.org/projects/wp-plugins/really-simple-ssl)
 * [Issues & pull requests](https://github.com/Really-Simple-Plugins/really-simple-ssl/issues)
 * [Feature requests](https://really-simple-ssl.com/feature-requests/)
 
 == Love Really Simple SSL? ==
-Hopefully, this plugin saves you some time. If you want to support the continuing development of this plugin, please consider buying [Really Simple SSL Pro](https://www.really-simple-ssl.com/pro/), which includes some excellent security features and premium support.
+If you want to support the continuing development of this plugin, please consider buying [Really Simple SSL Pro](https://www.really-simple-ssl.com/pro/), which includes some excellent security features and premium support.
 
 == About Really Simple Plugins ==
-Other plugins developed by Really Simple Plugins are: [Complianz](https://wordpress.org/plugins/complianz-gdpr/) and [Burst Statistics](https://wordpress.org/plugins/burst-statistics/). Really Simple SSL is developed by [Really Simple Plugins](https://www.really-simple-plugins.com).
+Our mission is to make complex WordPress requirements really easy. Really Simple SSL is developed by [Really Simple Plugins](https://www.really-simple-plugins.com).
 
 For generating SSL certificates, Really Simple SSL uses the [le acme2 PHP](https://github.com/fbett/le-acme2-php/) Let's Encrypt client library, thanks to 'fbett' for providing it. Vulnerability Detection uses WP Vulnerability, an open-source initiative by Javier Casares. Want to join as a collaborator? We're on [GitHub](https://github.com/really-simple-plugins/really-simple-ssl) as well!
 
@@ -79,19 +104,14 @@ For generating SSL certificates, Really Simple SSL uses the [le acme2 PHP](https
 To install this plugin:
 
 1. Make a backup! See [our recommendations](https://really-simple-ssl.com/knowledge-base/backing-up-your-site/).
-2. Install your SSL certificate or generate one with Really Simple SSL.
-3. Download the plugin.
-4. Upload the plugin to the /wp-content/plugins/ directory.
-5. You may need to log in again, so keep your credentials ready.
-6. Go to "Plugins" in your WordPress admin, then click "Activate".
-7. You will now see a notice asking you to enable SSL. Click it and log in again, if needed.
+2. Download the plugin.
+3. Upload the plugin to the /wp-content/plugins/ directory.
+4. Go to "Plugins" in your WordPress admin, then click "Activate".
+5. You will now see the Really Simple SSL onboarding process, to quickly help you through the configuration process.
 
 == Frequently Asked Questions ==
 = Knowledge Base =
-For more detailed explanations and documentation on redirect loops, Let's Encrypt, mixed content, errors, and so on, please search the [documentation](https://www.really-simple-ssl.com/knowledge-base/)
-
-= Vulnerability Detection =
-Vulnerability Detection is currently in Beta. It's stable, but needs scale to improve. If you can provide us with feedback, please do so!
+For more detailed explanations and documentation on all Really Simple SSL features, please search the [Knowlegde Base](https://www.really-simple-ssl.com/knowledge-base/)
 
 = Mixed Content issues =
 Most mixed content issues are caused by URLs in CSS or JS files. For detailed instructions on how to find mixed content read this [article](https://really-simple-ssl.com/knowledge-base/how-to-track-down-mixed-content-or-insecure-content/).
@@ -111,36 +131,79 @@ The plugin checks your certificate before enabling, but if, for example, you mig
 If you can't deactivate, do not just remove the plugin folder to uninstall! Follow these [instructions](https://really-simple-ssl.com/knowledge-base/uninstall-websitebackend-not-accessible/) instead.
 
 == Changelog ==
+= 8.1.1 =
+* May 14th, 2024
+* New: detection of non-recommended permissions on files
+* New: Configure region restrictions for your site
+* Improvement: Textual change on premium overlay
+* Improvement: Upgraded minimum required PHP version to 7.4
+* Improvement: compatibility with Bitnami
+* Improvement: compatibility of Limit Login Attempts with Woocommerce
+* Improvement: remove duplicate X-Really-Simple-SSL-Test from advanced-headers-test.php
+* Improvement: clear notice about .htaccess writable if do_not_edit_htaccess is enabled
+* Fix: upgrade from <6.0 version to >8.0 causing a fatal error
+* Fix: URL to details of detected vulnerabilities was incorrect
+
 = 8.1.0 =
-* April 24th, 2024
 * Improvement: some string corrections
+* Fix: show 'self' as default in Frame Ancestors
 * Improvement: catch not existing rsssl_version_compare
 * Improvement: check for openSSL module existence
 * Improvement: set default empty array for options, for legacy upgrades
+* Improvement: disable custom login URL when plain permalinks are enabled
+* New: Limit Login Attempts Captcha integration
 * Improvement: drop renamed folder notice, not needed anymore
+* Improvement: enable advanced headers in onboarding
+* Improvement: is_object check in updater
+
+= 8.0.1 =
+* Fix: enable 2FA during onboarding when not selected by user
+* Improvement: better CSP defaults
+* Fix: on upgrade to pro, free settings were cleared if "clear settings on deactivation" was enabled
+* Fix: catch several array key not existing errors
 
 = 8.0.0 =
+* New: hide remember me checkbox
 * New: extend blocking of malicious admin creation to multisite
-* Improvement: added dandomain host
-* Improvement: added Infomaniak host
+* Improvement: drop prefetch-src from Content Security Policy
+* Improvement: disable two-fa when login protection is disabled
+
+= 7.2.8 =
+* Fix: clear cron schedules on deactivation
+* Improvement: translations update
+* Notice: inform users about upcoming merge of free and pro plugin, not action needed, everything will be handled automatically
+
+= 7.2.7 =
+* Improvement: added integration with FlyingPress and Fastest Cache
+* Improvement: fix exiting a filter, causing a compatibility issue with BuddyPress
+
+= 7.2.6 =
+* Improvement: text changes
+* Improvement: css on login error message
+* Improvement: header detection improved by always checking the last url in the redirect chain
+* New: Added option to limit login cookie expiration time
+* Fix: custom 404 pages i.c.w. custom login url
+
+= 7.2.5 =
+* Fix: IP detection header order
+* Fix: table creation on activation of LLA module
+
+= 7.2.4 =
+* Fix: PHP warning in Password Security module
+* Fix: change login url feature not working with password protected pages
+* Improvement: move database table creation to Limit Login Attempts module
+* Improvement: prevent php error caused by debug.log file hardening feature
 
 = 7.2.3 =
-* Improvement: give json directory a random foldername, and remove after deactivating vulnerability detection
-* Improvement: link in vulnerability notification to the vulnerability overview page instead of measures
-* Improvement: allow for versions with a 'v' prefix in the version number in vulnerability detection
-* Fix: duplicate do_not_edit_htaccess key in the fields array, causing the setting to not be saved
-* Fix: css for last step in Lets Encrypt wizard
-* Fix: js error on subsites on a multisite setup in plugins overview due to deactivation modal
+* Fix: CSP data not showing in datatable
 
 = 7.2.2 =
-* January 24th 2024
-* Improvement: new onboarding setup
-* Improvement: improved hide wp-version logic
+* Improvement: improved check for PharData class
 
 = 7.2.1 =
 * Fix: Config for CSP preventing Learning mode from completing
 * Fix: datatable styling
-* Fix: using deactivate_https with wp-cli did not remove htaccess rules 
+* Fix: using deactivate_https with wp-cli did not remove htaccess rules
 * Improvement: add query parameter to enforce email verification &rsssl_force_verification
 * Improvement: css for check certificate manually button
 
