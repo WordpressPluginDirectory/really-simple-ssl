@@ -6,7 +6,7 @@ Requires at least: 5.9
 License: GPL2
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 8.1.1
+Stable tag: 8.1.3
 
 Easily improve site security with WordPress hardening, vulnerability detection and SSL certificate generation.
 
@@ -111,7 +111,7 @@ To install this plugin:
 
 == Frequently Asked Questions ==
 = Knowledge Base =
-For more detailed explanations and documentation on all Really Simple SSL features, please search the [Knowlegde Base](https://www.really-simple-ssl.com/knowledge-base/)
+For more detailed explanations and documentation on all Really Simple SSL features, please search the [Knowledge Base](https://www.really-simple-ssl.com/knowledge-base/)
 
 = Mixed Content issues =
 Most mixed content issues are caused by URLs in CSS or JS files. For detailed instructions on how to find mixed content read this [article](https://really-simple-ssl.com/knowledge-base/how-to-track-down-mixed-content-or-insecure-content/).
@@ -131,6 +131,14 @@ The plugin checks your certificate before enabling, but if, for example, you mig
 If you can't deactivate, do not just remove the plugin folder to uninstall! Follow these [instructions](https://really-simple-ssl.com/knowledge-base/uninstall-websitebackend-not-accessible/) instead.
 
 == Changelog ==
+= 8.1.3 =
+* May 16th, 2024
+* Fix: WP Rocket compatibility causing an issue when advanced-headers.php does not exist
+
+= 8.1.2 =
+* May 16th, 2024
+* Fix: upgrade advanced-headers.php file to allow early inclusion of the file. The ABSPATH defined check causes in issue for early inclusion, so must be removed.
+
 = 8.1.1 =
 * May 14th, 2024
 * New: detection of non-recommended permissions on files
