@@ -3,7 +3,7 @@
  * Plugin Name: Really Simple SSL
  * Plugin URI: https://really-simple-ssl.com
  * Description: Lightweight SSL & Hardening Plugin
- * Version: 8.1.5
+ * Version: 8.1.6
  * Requires at least: 5.9
  * Requires PHP: 7.4
  * Author: Really Simple Plugins
@@ -103,7 +103,7 @@ if ( !class_exists('REALLY_SIMPLE_SSL')) {
 			if ( !defined('rsssl_file') ){
 				define('rsssl_file', __FILE__);
 			}
-			define('rsssl_version', '8.1.5');
+			define('rsssl_version', '8.1.6');
 			define('rsssl_le_cron_generation_renewal_check', 20);
 			define('rsssl_le_manual_generation_renewal_check', 15);
 		}
@@ -262,23 +262,3 @@ if ( !function_exists('rsssl_is_logged_in_rest')){
 		return is_user_logged_in();
 	}
 }
-
-/**
- * Add rsssl_two_fa_status usermeta field
- *
- * @return void
- */
-function rsssl_register_user_meta() {
-	register_meta('user', 'rsssl_two_fa_status', [
-		'show_in_rest' => true,
-		'single' => true,
-		'type' => 'string',
-		'description' => 'The method of two-factor authentication for the user.',
-		'default' => 'disabled',
-		'auth_callback' => function() {
-			return rsssl_user_can_manage();
-		},
-	]);
-}
-
-add_action( 'init' , 'rsssl_register_user_meta' );

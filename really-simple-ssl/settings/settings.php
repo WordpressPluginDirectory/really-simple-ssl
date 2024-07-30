@@ -129,8 +129,8 @@ function rsssl_plugin_admin_scripts()
 						'type' => 'errors',
 						'action' => 'rsssl_rest_api_fallback'
 					),
-					admin_url('admin-ajax.php')),
-				'dashboard_url' => add_query_arg(['page' => 'really-simple-security'], rsssl_admin_url()),
+					admin_url('admin-ajax.php') ),
+				'dashboard_url' => rsssl_admin_url(),
 				'letsencrypt_url' => rsssl_letsencrypt_wizard_url(),
 				'le_generated_by_rsssl' => rsssl_generated_by_rsssl(),
 				'upgrade_link' => rsssl_link('pro', 'upgrade' ),
@@ -660,7 +660,6 @@ function rsssl_rest_api_fields_set(WP_REST_Request $request, $ajax_data = false)
 	$config_fields = rsssl_fields(false);
 	$config_ids = array_column($config_fields, 'id');
 	foreach ($fields as $index => $field) {
-
 		$config_field_index = array_search($field['id'], $config_ids);
 		$config_field = $config_fields[$config_field_index];
 		if ($config_field_index === false) {
@@ -789,7 +788,6 @@ function rsssl_rest_api_fields_get()
 		return [];
 	}
 
-//	rsssl_update_option('vulnerabilities_intro_shown', false);
 	$output = array();
 	$fields = rsssl_fields();
 	foreach ($fields as $index => $field) {
@@ -841,11 +839,12 @@ function rsssl_sanitize_field($value, string $type, string $id)
 		case 'select':
 		case 'host':
 		case 'text':
-		case 'textarea':
 		case 'license':
 		case 'captcha_key':
 		case 'postdropdown':
 			return sanitize_text_field($value);
+		case 'textarea':
+    		return wp_kses($value, array());
 		case 'multicheckbox':
 			if (!is_array($value)) {
 				$value = array($value);

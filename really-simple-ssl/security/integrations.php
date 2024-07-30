@@ -92,9 +92,19 @@ if ( ! function_exists('rsssl_is_integration_enabled') ) {
 		$field_value  = $details['option_value'] ?? false;
 		$stored_value = rsssl_get_option( $field_id );
 		if ( $field_value ) {
-			if ( $stored_value === $field_value ) {
-				return true;
+			$invert = false;
+			$condition_met = false;
+			if (strpos($field_value, 'NOT') === 0) {
+				$invert = true;
+				$field_value = str_replace( 'NOT ', '', $field_value);
 			}
+			if ( $stored_value === $field_value ) {
+				$condition_met = true;
+			}
+			if ( $invert ) {
+				$condition_met = !$condition_met;
+			}
+			return $condition_met;
 		} else if ( $stored_value ) {
 			return true;
 		}
