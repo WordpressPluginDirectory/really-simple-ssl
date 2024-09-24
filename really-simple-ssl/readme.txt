@@ -6,9 +6,9 @@ Requires at least: 5.9
 License: GPL2
 Tested up to: 6.6.1
 Requires PHP: 7.4
-Stable tag: 9.0.0
+Stable tag: 9.0.2
 
-Easily improve site security with WordPress Hardening, Two-Factor Authentication (2FA), Login Protection, Vulnerability Detection and SSL certificate generation.
+Easily improve site security with WordPress Hardening, Two-Factor Authentication (2FA), Login Protection, Vulnerability Detection and SSL certificate.
 
 == Description ==
 
@@ -151,6 +151,9 @@ The plugin checks your certificate before enabling, but if, for example, you mig
 If you can't deactivate, do not just remove the plugin folder to uninstall! Follow these [instructions](https://really-simple-ssl.com/knowledge-base/uninstall-websitebackend-not-accessible/) instead.
 
 == Changelog ==
+= 9.0.2 =
+* Fix: issue with deactivating 2fa
+
 = 9.0.0 =
 * September 16th
 * Fix: Instructions URL in the Firewall settings.
@@ -497,6 +500,8 @@ On settings page load, the .htaccess file is no rewritten. If you have made .hta
 Always back up before any upgrade. Especially .htaccess, wp-config.php and the plugin folder. This way you can easily roll back.
 
 == Screenshots ==
-1. Your Really Simple SSL dashboard - For optimal configuration.
-2. The Server Health Check - An in-depth look at your server.
-3. New Hardening Features - Fortify your website by minimizing weaknesses.
+1. The Really Simple Security Dashboard provides a quick security overview.
+2. Enable or enforce 2FA per user role.
+3. Stay ahead of plugin, theme and WP core vulnerabilities.
+4. Harden your site’s security with Basic Hardening features.
+5. 1-minute configuration with the short security onboarding.
