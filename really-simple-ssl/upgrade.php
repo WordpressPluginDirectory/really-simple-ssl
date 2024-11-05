@@ -221,6 +221,11 @@ function rsssl_upgrade() {
 		RSSSL()->admin->clear_admin_notices_cache();
 	}
 
+	if ( $prev_version && version_compare( $prev_version, '9.1.1', '<' ) ) {
+		do_action('rsssl_update_rules');
+		update_option('rsssl_reset_fix', true, false);
+	}
+
 	//don't clear on each update.
 	//RSSSL()->admin->clear_admin_notices_cache();
 
