@@ -1,12 +1,12 @@
 === Really Simple Security - Simple and Performant Security (formerly Really Simple SSL)===
-Contributors: RogierLankhorst, markwolters, hesseldejong, vicocotea, marcelsanting, janwoostendorp
+Contributors: RogierLankhorst, markwolters, hesseldejong, vicocotea, marcelsanting, janwoostendorp, wimbraam
 Donate link: https://www.paypal.me/reallysimplessl
 Tags: security, ssl, 2fa, vulnerabilities, two factor
 Requires at least: 5.9
 License: GPL2
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 9.1.4
+Stable tag: 9.2.0
 
 Easily improve site security with WordPress Hardening, Two-Factor Authentication (2FA), Login Protection, Vulnerability Detection and SSL certificate.
 
@@ -101,7 +101,7 @@ With Limit Login Attempts you can configure a threshold to temporarily or perman
 * [Security Definitions](https://really-simple-ssl.com/definitions/)
 * [Translate Really Simple Security](https://translate.wordpress.org/projects/wp-plugins/really-simple-ssl)
 * [Issues & pull requests](https://github.com/Really-Simple-Plugins/really-simple-ssl/issues)
-* [Feature requests](https://really-simple-ssl.com/feature-requests/)
+* [Feature requests](https://github.com/Really-Simple-Plugins/really-simple-ssl/labels/feature%20request)
 
 == Love Really Simple Security? ==
 If you want to support the continuing development of this plugin, please consider buying [Really Simple Security Pro](https://www.really-simple-ssl.com/pro/), which includes some excellent security features and premium support.
@@ -151,6 +151,11 @@ The plugin checks your certificate before enabling, but if, for example, you mig
 If you can't deactivate, do not just remove the plugin folder to uninstall! Follow these [instructions](https://really-simple-ssl.com/knowledge-base/uninstall-websitebackend-not-accessible/) instead.
 
 == Changelog ==
+= 9.2.0 =
+* January 20th, 2025
+* Fix: Added nonce check to certificate re-check button.
+* Fix: In some cases the review notice was not properly dismissible.
+
 = 9.1.4 =
 * Improvement: do not track 404's for logged in users
 * Improvement: implemented the rsssl_wpconfig_path filter in all wp-config functions
