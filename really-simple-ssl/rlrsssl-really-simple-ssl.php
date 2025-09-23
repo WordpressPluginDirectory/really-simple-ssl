@@ -3,7 +3,7 @@
  * Plugin Name: Really Simple Security
  * Plugin URI: https://really-simple-ssl.com
  * Description: Easily improve site security with WordPress Hardening, Two-Factor Authentication (2FA), Login Protection, Vulnerability Detection and SSL certificate generation.
- * Version: 9.5.0.2
+ * Version: 9.5.1
  * Requires at least: 6.6
  * Requires PHP: 7.4
  * Author: Really Simple Security
@@ -113,7 +113,7 @@ if ( class_exists('REALLY_SIMPLE_SSL') ) {
             if ( !defined('rsssl_file') ){
                 define('rsssl_file', __FILE__);
             }
-            define('rsssl_version', '9.5.0.2');
+            define('rsssl_version', '9.5.1');
             define('rsssl_le_cron_generation_renewal_check', 20);
             define('rsssl_le_manual_generation_renewal_check', 15);
         }
@@ -253,7 +253,6 @@ if ( ! function_exists( 'rsssl_user_can_manage' ) ) {
         if ( defined( 'WP_CLI' ) && WP_CLI ){
             return true;
         }
-
         return false;
     }
 }
@@ -268,27 +267,27 @@ if ( !function_exists('rsssl_admin_logged_in')){
 
 
 if ( ! function_exists( 'rsssl_is_logged_in_rest' ) ) {
-	function rsssl_is_logged_in_rest() {
-		// Check if the request URI is valid
-		if (!isset($_SERVER['REQUEST_URI'])) {
-			return false;
-		}
+    function rsssl_is_logged_in_rest() {
+        // Check if the request URI is valid
+        if (!isset($_SERVER['REQUEST_URI'])) {
+            return false;
+        }
 
-		$request_uri = $_SERVER['REQUEST_URI'];
+        $request_uri = $_SERVER['REQUEST_URI'];
 
-		// Check for a direct REST API path
-		if (strpos($request_uri, '/reallysimplessl/v1/') !== false) {
-			return is_user_logged_in();
-		}
+        // Check for a direct REST API path
+        if (strpos($request_uri, '/really-simple-security/v1/') !== false) {
+            return is_user_logged_in();
+        }
 
-		// Check for rest_route parameter with reallysimplessl (plain permalinks)
-		if (strpos($request_uri, 'rest_route=') !== false &&
-		    strpos($request_uri, 'reallysimplessl') !== false) {
-			return is_user_logged_in();
-		}
+        // Check for rest_route parameter with really-simple-security (plain permalinks)
+        if (strpos($request_uri, 'rest_route=') !== false &&
+            strpos($request_uri, 'really-simple-security') !== false) {
+            return is_user_logged_in();
+        }
 
-		return false;
-	}
+        return false;
+    }
 }
 
 if ( ! function_exists( 'rsssl_maybe_activate_recommended_features_extendify' ) ) {
