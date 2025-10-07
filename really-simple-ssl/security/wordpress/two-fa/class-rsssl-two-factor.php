@@ -116,11 +116,7 @@ class Rsssl_Two_Factor
          * Runs the fix for the reset error in 9.1.1
          */
 	    if (filter_var(get_option('rsssl_reset_fix', false), FILTER_VALIDATE_BOOLEAN)) {
-            global $wpdb;
-            $queryBuilder = new Rsssl_Two_Fa_User_Query_Builder($wpdb);
-            $factory = new Rsssl_Two_Factor_User_Factory(new Rsssl_Two_Fa_Status_Service());
-            $repository = new Rsssl_Two_Fa_User_Repository($queryBuilder, $factory);
-            (new Rsssl_Two_Factor_Reset_Service($repository))->resetFix();
+		    RSSSL_Two_Factor_Reset_Factory::reset_fix();
 	    }
 
 //		add_action( 'login_enqueue_scripts', array( __CLASS__, 'twofa_scripts' ) );
