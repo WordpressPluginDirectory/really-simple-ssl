@@ -2,14 +2,14 @@
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Really Simple Security Pro 9.5.2.2\n"
+"Project-Id-Version: Really Simple Security Pro 9.5.2.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/really-simple-ssl-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-10-07T09:59:49+00:00\n"
+"POT-Creation-Date: 2025-10-14T08:23:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: really-simple-ssl\n"
@@ -145,7 +145,7 @@ msgstr ""
 #: assets/templates/two_fa/profile-settings.php:52
 #: assets/templates/two_fa/totp-config.php:23
 #: pro/security/wordpress/two-fa/providers/class-rsssl-two-factor-totp.php:668
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1444
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1442
 msgid "Download Backup Codes"
 msgstr ""
 
@@ -4732,12 +4732,12 @@ msgid "Use an authenticator app on your mobile device to generate a code."
 msgstr ""
 
 #: pro/security/wordpress/two-fa/providers/class-rsssl-two-factor-totp.php:669
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1445
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1443
 msgid "Key copied"
 msgstr ""
 
 #: pro/security/wordpress/two-fa/providers/class-rsssl-two-factor-totp.php:670
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1446
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1444
 msgid "Could not copy text: "
 msgstr ""
 
@@ -5168,56 +5168,56 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:547
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1300
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:545
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1298
 msgid "Your 2FA grace period expired. Please contact your site administrator to regain access and to configure 2FA."
 msgstr ""
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:621
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:619
 msgid "API login for user disabled."
 msgstr ""
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:718
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:716
 msgid "Warning: There has been %1$s failed login attempt on your account without providing a valid two-factor token. The last failed login occurred %2$s ago. If this wasn't you, you should reset your password."
 msgid_plural "Warning: %1$s failed login attempts have been detected on your account without providing a valid two-factor token. The last failed login occurred %2$s ago. If this wasn't you, you should reset your password."
 msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s: URL to reset password
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:773
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:771
 msgid "Your password was reset because of too many failed Two Factor attempts. You will need to <a href=\"%s\">create a new password</a> to regain access. Please check your email for more information."
 msgstr ""
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:985
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:983
 msgid "Authentication provider not specified or invalid."
 msgstr ""
 
 #. translators: %s: time delay between login attempts
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1011
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1009
 msgid "Too many invalid verification codes, you can try again in %s. This limit protects your account against automated attacks."
 msgstr ""
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1073
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1071
 msgid "Invalid verification code."
 msgstr ""
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1237
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1235
 msgid "There have been too many failed two-factor authentication attempts, which often indicates that the password has been compromised. The password has been reset in order to protect the account."
 msgstr ""
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1241
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1239
 msgid "If you are the owner of this account, please check your email for instructions on regaining access."
 msgstr ""
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1248
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1246
 msgid "Password Reset"
 msgstr ""
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1361
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1359
 msgid "Two-Factor Authentication Setup"
 msgstr ""
 
-#: security/wordpress/two-fa/class-rsssl-two-factor.php:1464
+#: security/wordpress/two-fa/class-rsssl-two-factor.php:1462
 msgid "Failed to create a login nonce."
 msgstr ""
 

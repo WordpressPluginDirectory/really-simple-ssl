@@ -13,11 +13,8 @@
 namespace RSSSL\Security\WordPress\Two_Fa;
 
 use Exception;
-use RSSSL\Security\WordPress\Two_Fa\Models\Rsssl_Two_Factor_User_Factory;
-use RSSSL\Security\WordPress\Two_Fa\Repositories\Rsssl_Two_Fa_User_Query_Builder;
 use RSSSL\Security\WordPress\Two_Fa\Repositories\Rsssl_Two_Fa_User_Repository;
 use RSSSL\Security\WordPress\Two_Fa\Services\Rsssl_Two_Fa_Reminder_Service;
-use RSSSL\Security\WordPress\Two_Fa\Services\Rsssl_Two_Fa_Status_Service;
 use RSSSL\Security\WordPress\Two_Fa\Services\Rsssl_Two_Factor_Reset_Service;
 use RSSSL\Security\WordPress\Two_Fa\Providers\Rsssl_Provider_Loader;
 use RSSSL\Security\WordPress\Two_Fa\Providers\Rsssl_Two_Factor_Provider;
@@ -116,7 +113,8 @@ class Rsssl_Two_Factor
          * Runs the fix for the reset error in 9.1.1
          */
 	    if (filter_var(get_option('rsssl_reset_fix', false), FILTER_VALIDATE_BOOLEAN)) {
-		    RSSSL_Two_Factor_Reset_Factory::reset_fix();
+            $repository = new Rsssl_Two_Fa_User_Repository();
+            (new Rsssl_Two_Factor_Reset_Service($repository))->resetFix();
 	    }
 
 //		add_action( 'login_enqueue_scripts', array( __CLASS__, 'twofa_scripts' ) );
