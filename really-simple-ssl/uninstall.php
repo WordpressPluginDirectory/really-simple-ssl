@@ -121,6 +121,7 @@ if ( isset( $rsssl_settings['delete_data_on_uninstall'] ) && $rsssl_settings['de
 		'rsssl_firewall_environment_signature',
 		'rsssl_csp_header_test_status',
 		'rsssl_csp_header_test_status_expiry',
+		'rsssl_permalink_changed_to_plain',
 	];
 	foreach ( $rsssl_options as $rsssl_option_name ) {
 		delete_option( $rsssl_option_name );
