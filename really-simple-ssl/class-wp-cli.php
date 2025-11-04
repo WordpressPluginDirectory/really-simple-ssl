@@ -297,10 +297,12 @@ class rsssl_wp_cli {
 			rsssl_update_option( 'enable_vulnerability_scanner', false );
 
 			// Deactivate essential WordPress hardening features
-			$recommended_hardening_fields = RSSSL()->onboarding->get_hardening_fields();
-			foreach ( $recommended_hardening_fields as $field ) {
-				rsssl_update_option( $field, false );
-			}
+            if (isset(RSSSL()->settingsConfigService)) {
+                $recommended_hardening_fields = RSSSL()->settingsConfigService->getRecommendedHardeningSettings();
+                foreach ( $recommended_hardening_fields as $field ) {
+                    rsssl_update_option( $field, false );
+                }
+            }
 
 			// Disable Email login protection
 			rsssl_update_option( 'login_protection_enabled', false );
@@ -357,10 +359,12 @@ class rsssl_wp_cli {
 	public function activate_recommended_hardening_features() {
 		if ( ! $this->check_pro_command_preconditions() ) return;
 		try {
-			$recommended_hardening_fields = RSSSL()->onboarding->get_hardening_fields();
-			foreach ( $recommended_hardening_fields as $field ) {
-				rsssl_update_option( $field, true );
-			}
+            if (isset(RSSSL()->settingsConfigService)) {
+                $recommended_hardening_fields = RSSSL()->settingsConfigService->getRecommendedHardeningSettings();
+                foreach ( $recommended_hardening_fields as $field ) {
+                    rsssl_update_option( $field, true );
+                }
+            }
 			do_action('rsssl_update_rules');
 			WP_CLI::success( 'Recommended hardening features activated.' );
 		} catch ( Exception $e ) {
@@ -376,10 +380,12 @@ class rsssl_wp_cli {
 	public function deactivate_recommended_hardening_features() {
 		if ( ! $this->check_pro_command_preconditions() ) return;
 		try {
-			$recommended_hardening_fields = RSSSL()->onboarding->get_hardening_fields();
-			foreach ( $recommended_hardening_fields as $field ) {
-				rsssl_update_option( $field, false );
-			}
+            if (isset(RSSSL()->settingsConfigService)) {
+                $recommended_hardening_fields = RSSSL()->settingsConfigService->getRecommendedHardeningSettings();
+                foreach ( $recommended_hardening_fields as $field ) {
+                    rsssl_update_option( $field, false );
+                }
+            }
 			do_action('rsssl_update_rules');
 			WP_CLI::success( 'Recommended hardening features deactivated.' );
 		} catch ( Exception $e ) {

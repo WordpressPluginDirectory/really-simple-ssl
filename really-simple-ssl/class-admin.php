@@ -3048,10 +3048,12 @@ class rsssl_admin {
         // Activate Vulnerability Scanner
         rsssl_update_option( 'enable_vulnerability_scanner', true );
 
-        // Activate essential WordPress hardening features
-        $recommended_hardening_fields = RSSSL()->onboarding->get_hardening_fields();
-        foreach ( $recommended_hardening_fields as $field ) {
-            rsssl_update_option( $field, true );
+        if (isset(RSSSL()->settingsConfigService)) {
+            // Activate essential WordPress hardening features
+            $recommended_hardening_fields = RSSSL()->settingsConfigService->getRecommendedHardeningSettings();
+            foreach ( $recommended_hardening_fields as $field ) {
+                rsssl_update_option( $field, true );
+            }
         }
 
         // Enable Email login protection
@@ -3150,6 +3152,18 @@ class rsssl_admin {
 			$this->clear_admin_notices_cache();
 		}
 	}
+
+    /**
+     * Wrapper function that delegates the onboarding reset to the global onboardingService
+     *
+     * @return void
+     */
+    public function reset_onboarding() {
+        if ( class_exists( '\ReallySimplePlugins\RSS\Core\Services\GlobalOnboardingService' ) ) {
+            $globalOnboardingService = new \ReallySimplePlugins\RSS\Core\Services\GlobalOnboardingService();
+            $globalOnboardingService->resetOnboarding();
+        }
+    }
 
 } //class closure
 
