@@ -106,6 +106,18 @@ return array(
 		'version' => 'dev-main',
 		'path'    => $baseDir . '/app/Features/Onboarding/OnboardingStepsGenerator.php'
 	),
+	'ReallySimplePlugins\\RSS\\Core\\Features\\Pro\\HibpPasswordCheck\\HibpPasswordCheckController' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/app/Features/Pro/HibpPasswordCheck/HibpPasswordCheckController.php'
+	),
+	'ReallySimplePlugins\\RSS\\Core\\Features\\Pro\\HibpPasswordCheck\\HibpPasswordCheckLoader' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/app/Features/Pro/HibpPasswordCheck/HibpPasswordCheckLoader.php'
+	),
+	'ReallySimplePlugins\\RSS\\Core\\Features\\Pro\\HibpPasswordCheck\\HibpPasswordCheckService' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/app/Features/Pro/HibpPasswordCheck/HibpPasswordCheckService.php'
+	),
 	'ReallySimplePlugins\\RSS\\Core\\Interfaces\\ControllerInterface' => array(
 		'version' => 'dev-main',
 		'path'    => $baseDir . '/app/Interfaces/ControllerInterface.php'
