@@ -2,35 +2,40 @@
 # This file is distributed under the GPLv2.
 msgid ""
 msgstr ""
-"Project-Id-Version: Really Simple Security Pro 9.5.6\n"
+"Project-Id-Version: Really Simple Security Pro 9.5.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/really-simple-ssl-pro\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-07T12:38:29+00:00\n"
+"POT-Creation-Date: 2026-02-03T08:17:24+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.8.1\n"
+"X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: really-simple-ssl\n"
 
 #. Plugin Name of the plugin
+#: really-simple-ssl-pro.php
 msgid "Really Simple Security Pro"
 msgstr ""
 
 #. Plugin URI of the plugin
+#: really-simple-ssl-pro.php
 msgid "https://really-simple-ssl.com"
 msgstr ""
 
 #. Description of the plugin
+#: really-simple-ssl-pro.php
 msgid "Simple and performant security"
 msgstr ""
 
 #. Author of the plugin
+#: really-simple-ssl-pro.php
 msgid "Really Simple Plugins"
 msgstr ""
 
 #. Author URI of the plugin
+#: really-simple-ssl-pro.php
 msgid "https://really-simple-ssl.com/about-us"
 msgstr ""
 
@@ -83,7 +88,7 @@ msgstr ""
 
 #: assets/templates/two_fa/onboarding.php:126
 #: assets/templates/two_fa/profile-settings.php:121
-#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:383
+#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:382
 msgid "Resend Code"
 msgstr ""
 
@@ -365,12 +370,12 @@ msgid "Retry"
 msgstr ""
 
 #: class-admin.php:2214
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:103
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:110
 msgid "Could not test certificate"
 msgstr ""
 
 #: class-admin.php:2215
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:103
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:110
 msgid "Automatic certificate detection is not possible on your server."
 msgstr ""
 
@@ -1039,71 +1044,71 @@ msgstr ""
 msgid "Flag to remove a permanent block."
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingController.php:138
+#: core/app/Features/Onboarding/OnboardingController.php:147
 msgid "Nonce validation failed"
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:68
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:75
 msgid "You may need to login in again, have your credentials prepared."
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:79
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:86
 msgid "Welcome to Really Simple Security"
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:80
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:87
 msgid "The onboarding wizard will help to configure essential security features in 1 minute! Select your hosting provider to start."
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:95
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:102
 msgid "An SSL certificate has been detected"
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:110
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:117
 msgid "No SSL certificate has been detected."
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:110
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:117
 msgid "Please refresh the SSL status if a certificate has been installed recently."
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:126
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:133
 msgid "Verify your email"
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:127
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:134
 msgid "Really Simple Security will send email notifications and security warnings from your server. We will send a test email to confirm that email is correctly configured on your site. Look for the confirmation button in the email."
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:128
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:135
 #: settings/build/995.7a0675fe0519b06656b3.js:1
 #: settings/src/Settings/Settings.js:153
 msgid "Save and continue"
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:140
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:147
 msgid "Instantly configure these essential features."
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:144
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:151
 msgid "Please %sconsider upgrading to Pro%s to enjoy all simple and performant security features."
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:155
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:162
 msgid "Essential security"
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:158
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:165
 #: settings/build/366.0e8cd32aeda45546f72d.js:1
 #: settings/src/Dashboard/Vulnerabilities/Vulnerabilities.js:116
 msgid "Enable"
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:175
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:182
 msgid "Activate your license key"
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:180
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:187
 #: settings/config/menu.php:755
 #: settings/build/366.0e8cd32aeda45546f72d.js:1
 #: settings/build/485.09b2206e7cb2f9ad160e.js:1
@@ -1114,12 +1119,12 @@ msgstr ""
 msgid "Activate"
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:194
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:201
 msgid "Heavyweight security features, in a lightweight performant plugin from Really Simple Plugins. Get started with below features and get the latest and greatest updates for peace of mind!"
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:196
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:212
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:203
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:219
 #: upgrade/upgrade-to-pro.php:132
 #: upgrade/upgrade-to-pro.php:145
 #: settings/build/366.0e8cd32aeda45546f72d.js:1
@@ -1127,11 +1132,11 @@ msgstr ""
 msgid "Install"
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:209
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:216
 msgid "We think you will like this"
 msgstr ""
 
-#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:210
+#: core/app/Features/Onboarding/OnboardingStepsGenerator.php:217
 msgid "Really Simple Plugins is also the author of the below privacy-focused plugins including consent management and legal documents!"
 msgstr ""
 
@@ -1141,7 +1146,7 @@ msgstr ""
 msgid "Warning: This password has been found in %d data breaches. Please choose a different password."
 msgstr ""
 
-#: core/app/Managers/EndpointManager.php:174
+#: core/app/Managers/EndpointManager.php:175
 msgid "Forbidden."
 msgstr ""
 
@@ -2784,20 +2789,20 @@ msgstr ""
 msgid "Permalink settings"
 msgstr ""
 
-#: pro/security/wordpress/block-admin-creation.php:365
+#: pro/security/wordpress/block-admin-creation.php:379
 msgid "Manual approval required"
 msgstr ""
 
-#: pro/security/wordpress/block-admin-creation.php:366
+#: pro/security/wordpress/block-admin-creation.php:380
 msgid "Because of your settings in Really Simple Security, this user has been set to subscriber until you change the role manually."
 msgstr ""
 
-#: pro/security/wordpress/block-admin-creation.php:376
-#: pro/security/wordpress/block-admin-creation.php:377
+#: pro/security/wordpress/block-admin-creation.php:390
+#: pro/security/wordpress/block-admin-creation.php:391
 msgid "Suspicious admin account detected"
 msgstr ""
 
-#: pro/security/wordpress/block-admin-creation.php:378
+#: pro/security/wordpress/block-admin-creation.php:392
 msgid "A user account with administrator privileges was created outside the WordPress dashboard on %s"
 msgstr ""
 
@@ -2834,25 +2839,25 @@ msgstr ""
 msgid "Captcha was not verified successfully. Please try again."
 msgstr ""
 
-#: pro/security/wordpress/class-rsssl-event-listener.php:182
+#: pro/security/wordpress/class-rsssl-event-listener.php:184
 msgid "<strong>Error</strong>: Captcha validation failed."
 msgstr ""
 
-#: pro/security/wordpress/class-rsssl-event-listener.php:198
+#: pro/security/wordpress/class-rsssl-event-listener.php:200
 msgid "Your access has been denied due to too many failed login attempts."
 msgstr ""
 
-#: pro/security/wordpress/class-rsssl-event-listener.php:260
-#: pro/security/wordpress/class-rsssl-event-listener.php:315
+#: pro/security/wordpress/class-rsssl-event-listener.php:262
+#: pro/security/wordpress/class-rsssl-event-listener.php:317
 msgid "Your access has been denied, too many login attempts"
 msgstr ""
 
-#: pro/security/wordpress/class-rsssl-event-listener.php:282
-#: pro/security/wordpress/class-rsssl-event-listener.php:308
+#: pro/security/wordpress/class-rsssl-event-listener.php:284
+#: pro/security/wordpress/class-rsssl-event-listener.php:310
 msgid "Your access has been denied, please contact the webmaster for support"
 msgstr ""
 
-#: pro/security/wordpress/class-rsssl-event-log.php:266
+#: pro/security/wordpress/class-rsssl-event-log.php:263
 msgid "unknown"
 msgstr ""
 
@@ -3116,235 +3121,361 @@ msgid "Change your password"
 msgstr ""
 
 #: pro/security/wordpress/eventlog/class-rsssl-event-type.php:119
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:174
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:172
 msgid "System"
 msgstr ""
 
 #. translators: %s is replaced with the username.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:255
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:253
 msgid "Login by %s was successful"
 msgstr ""
 
 #. translators: %s is replaced with the username.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:258
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:256
 msgid "Login by %s failed (incorrect credentials)"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:260
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:524
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:258
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:605
 msgid "REST API authentication successful"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:260
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:265
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:270
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:275
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:524
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:529
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:534
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:539
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:258
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:263
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:268
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:273
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:605
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:610
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:615
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:620
 msgid "Authentication"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:265
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:529
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:263
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:610
 msgid "REST API authentication failed"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:270
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:534
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:268
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:615
 msgid "XML-RPC authentication successful"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:275
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:539
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:273
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:620
 msgid "XML-RPC authentication failed"
 msgstr ""
 
 #. translators: %s is replaced with the username.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:281
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:279
 msgid "User %s added to temporary blocklist"
 msgstr ""
 
 #. translators: %s is replaced with the username.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:285
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:283
 msgid "User %s removed from temporary blocklist"
 msgstr ""
 
 #. translators: %s is replaced with the username.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:290
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:288
 msgid "User %s added to permanent blocklist"
 msgstr ""
 
 #. translators: %s is replaced with the username.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:293
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:291
 msgid "User %s removed from permanent blocklist"
 msgstr ""
 
 #. translators: %s is replaced with the username.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:296
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:294
 msgid "User %s added to trusted  IP list"
 msgstr ""
 
 #. translators: %s is replaced with the username.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:300
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:298
 msgid "User %s removed from trusted IP list"
 msgstr ""
 
 #. translators: %s is replaced with the IP address.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:305
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:303
 msgid "IP address %s added to temporary blocklist"
 msgstr ""
 
 #. translators: %s is replaced with the IP address.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:308
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:306
 msgid "IP address %s removed from temporary blocklist"
 msgstr ""
 
 #. translators: %s is replaced with the IP address.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:311
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:309
 msgid "IP address %s added to permanent blocklist"
 msgstr ""
 
 #. translators: %s is replaced with the IP address.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:314
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:312
 msgid "IP address %s removed from permanent blocklist"
 msgstr ""
 
 #. translators: %s is replaced with the IP address.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:317
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:315
 msgid "IP address %s added to trusted IP list"
 msgstr ""
 
 #. translators: %s is replaced with the IP address.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:320
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:318
 msgid "IP address %s removed from trusted IP list"
 msgstr ""
 
 #. translators: %s is replaced with the country name.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:324
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:322
 msgid "Country %s added to geo-IP blocklist"
 msgstr ""
 
 #. translators: %s is replaced with the country name.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:330
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:328
 msgid "Country %s removed from geo-IP blocklist"
 msgstr ""
 
 #. translators: %s is replaced with the email address.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:335
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:333
 msgid "Unblock link sent to %s"
 msgstr ""
 
 #. translators: %s is replaced with the username.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:339
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:337
 msgid "Login failed (User %s found in temporary blocklist)"
 msgstr ""
 
 #. translators: %s is replaced with the username.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:345
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:343
 msgid "Login failed (User %s found in permanent blocklist)"
 msgstr ""
 
 #. translators: %s is replaced with the IP address.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:350
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:348
 msgid "Login failed (IP %s found in temporary blocklist)"
 msgstr ""
 
 #. translators: %s is replaced with the IP address.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:353
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:351
 msgid "Login failed (IP %s found in permanent blocklist)"
 msgstr ""
 
 #. translators: %s is replaced with the country name.
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:357
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:355
 msgid "Login failed (Country %s blocked by geo-IP blocklist )"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:361
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:359
 msgid "Login failed (incorrect MFA code)"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:361
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:366
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:359
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:364
 msgid "MFA"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:366
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:364
 msgid "MFA setup required"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:369
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:580
+#. translators: %s is replaced with the country name.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:368
+msgid "Country %s was added to the block list"
+msgstr ""
+
+#. translators: %s is replaced with the country name.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:371
+msgid "Country %s was removed from the block list"
+msgstr ""
+
+#. translators: %s is replaced with the region name.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:374
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:410
+msgid "All countries in the region %s were added to the block list"
+msgstr ""
+
+#. translators: %s is replaced with the region name.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:377
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:416
+msgid "All countries from %s were removed from the block list"
+msgstr ""
+
+#. translators: %s is replaced with the IP address.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:380
+msgid "IP address %s exceeded the 404 threshold"
+msgstr ""
+
+#. translators: %s is replaced with the IP address.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:383
+msgid "IP address %s was blocked by the administrator"
+msgstr ""
+
+#. translators: %s is replaced with the IP address.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:386
+msgid "IP address %s was removed from the block list"
+msgstr ""
+
+#. translators: %s is replaced with the IP address.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:389
+msgid "IP address %s was added to the allowlist"
+msgstr ""
+
+#. translators: %s is replaced with the IP address.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:392
+msgid "IP address %s was removed from the allowlist"
+msgstr ""
+
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:398
+msgid "%s was added to the block list"
+msgstr ""
+
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:404
+msgid "%s was removed from the block list"
+msgstr ""
+
+#. translators: %s is replaced with the IP address.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:421
+msgid "IP address: %s exceeded the 404 threshold"
+msgstr ""
+
+#. translators: %s is replaced with the IP address.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:424
+msgid "IP address: %s was blocked by the administrator"
+msgstr ""
+
+#. translators: %s is replaced with the IP address.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:427
+msgid "IP address: %s was removed from the block list"
+msgstr ""
+
+#. translators: %s is replaced with the IP address.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:430
+msgid "IP address: %s was added to the allowlist"
+msgstr ""
+
+#. translators: %s is replaced with the IP address.
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:433
+msgid "IP address: %s was removed from the allowlist"
+msgstr ""
+
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:436
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:700
 msgid "Unknown event"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:520
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:601
 msgid "Login successful"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:522
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:603
 msgid "Login failed"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:544
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:625
 msgid "User locked out"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:547
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:628
 msgid "User removed from blocklist"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:549
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:630
 msgid "User added to blocklist"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:551
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:632
 msgid "User added to trusted list"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:553
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:634
 msgid "User removed from trusted list"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:555
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:636
 msgid "IP address locked-out"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:558
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:639
 msgid "IP removed from blocklist"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:560
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:641
 msgid "IP added to blocklist"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:562
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:643
 msgid "IP added to trusted list"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:564
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:645
 msgid "IP removed from trusted list"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:567
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:648
 msgid "Geo-IP blocklist changed"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:569
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:650
 msgid "Unblock link sent"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:572
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:653
 msgid "Login blocked by username"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:575
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:656
 msgid "Login blocked by IP address"
 msgstr ""
 
-#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:577
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:658
 msgid "Login blocked by Geo-IP list"
+msgstr ""
+
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:661
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:681
+msgid "Country added to block list"
+msgstr ""
+
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:663
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:683
+msgid "Country removed from block list"
+msgstr ""
+
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:665
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:685
+msgid "Region added to block list"
+msgstr ""
+
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:667
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:687
+msgid "Region removed from block list"
+msgstr ""
+
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:669
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:689
+#: pro/security/wordpress/firewall/models/class-rsssl-404-block.php:186
+msgid "404 threshold exceeded"
+msgstr ""
+
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:671
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:691
+msgid "IP added to block list"
+msgstr ""
+
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:673
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:693
+msgid "IP removed from block list"
+msgstr ""
+
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:675
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:695
+msgid "IP added to allowlist"
+msgstr ""
+
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:677
+#: pro/security/wordpress/eventlog/class-rsssl-event-type.php:697
+msgid "IP removed from allowlist"
 msgstr ""
 
 #: pro/security/wordpress/firewall/builders/rules/class-rsssl-translatable-strings-section-builder.php:56
@@ -3378,10 +3509,6 @@ msgstr ""
 
 #: pro/security/wordpress/firewall/class-rsssl-404-interceptor.php:359
 msgid "Error code: 404"
-msgstr ""
-
-#: pro/security/wordpress/firewall/models/class-rsssl-404-block.php:186
-msgid "404 threshold exceeded"
 msgstr ""
 
 #: pro/security/wordpress/limitlogin/class-rsssl-admin-config-countries.php:120
@@ -4722,13 +4849,13 @@ msgstr ""
 
 #: pro/security/wordpress/two-fa/providers/class-rsssl-two-factor-passkey.php:204
 #: pro/security/wordpress/two-fa/providers/class-rsssl-two-factor-totp.php:602
-#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:584
+#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:582
 msgid "Enabled"
 msgstr ""
 
 #: pro/security/wordpress/two-fa/providers/class-rsssl-two-factor-passkey.php:204
 #: pro/security/wordpress/two-fa/providers/class-rsssl-two-factor-totp.php:605
-#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:584
+#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:582
 #: settings/config/fields/firewall.php:101
 #: settings/config/fields/firewall.php:106
 #: settings/config/fields/security-headers.php:14
@@ -5212,7 +5339,7 @@ msgid "Authenticator App"
 msgstr ""
 
 #: security/wordpress/two-fa/class-rsssl-two-factor-settings.php:659
-#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:586
+#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:584
 #: settings/config/fields/vulnerability-detection.php:108
 #: settings/config/menu.php:35
 msgid "Email"
@@ -5339,20 +5466,20 @@ msgstr ""
 msgid "A new verification code has been sent to your email address."
 msgstr ""
 
-#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:380
+#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:381
 msgid "Log In"
 msgstr ""
 
-#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:415
+#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:413
 msgid "Don't use Two-Factor Authentication"
 msgstr ""
 
 #. translators: %s: email address
-#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:484
+#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:482
 msgid "Authentication codes will be sent to %s."
 msgstr ""
 
-#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:587
+#: security/wordpress/two-fa/providers/class-rsssl-two-factor-email.php:585
 msgid "Receive a code by email"
 msgstr ""
 

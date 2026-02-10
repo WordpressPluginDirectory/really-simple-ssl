@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace ReallySimplePlugins\RSS\Core\Traits;
 
 use ReallySimplePlugins\RSS\Core\Bootstrap\App;
+use ReallySimplePlugins\RSS\Core\Support\Helpers\Storages\EnvironmentConfig;
 
 trait HasViews
 {
@@ -14,8 +15,8 @@ trait HasViews
      */
     public function view(string $path, array $variables = [], string $extension = 'php'): string
     {
-        $container = App::getInstance();
-        $basePath = $container->config->getString('env.plugin.view_path');
+        $env = App::getInstance()->get(EnvironmentConfig::class);
+        $basePath = $env->getString('plugin.view_path');
         $filePath = realpath($basePath . $path . '.' . $extension);
 
         // Someone is doing something dirty

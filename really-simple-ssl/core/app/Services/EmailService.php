@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace ReallySimplePlugins\RSS\Core\Services;
 
 use ReallySimplePlugins\RSS\Core\Bootstrap\App;
+use ReallySimplePlugins\RSS\Core\Support\Helpers\Storages\EnvironmentConfig;
+use ReallySimplePlugins\RSS\Core\Support\Helpers\Storages\UriConfig;
 use ReallySimplePlugins\RSS\Core\Traits\HasEncryption;
 
 /**
@@ -15,11 +17,13 @@ class EmailService
     use HasEncryption;
 
     private ?\rsssl_mailer $mailer = null;
-    protected App $app;
+	protected EnvironmentConfig $env;
+	protected UriConfig $uriConfig;
 
-    public function __construct(App $app)
+    public function __construct(EnvironmentConfig $environmentConfig, UriConfig $uriConfig)
     {
-        $this->app = $app;
+		$this->env = $environmentConfig;
+		$this->uriConfig = $uriConfig;
     }
 
     /**
@@ -32,7 +36,7 @@ class EmailService
             return $this->mailer;
         }
 
-        require_once $this->app->config->getString('env.plugin.path') . '/mailer/class-mail.php';
+        require_once $this->env->getString('plugin.path') . '/mailer/class-mail.php';
         $this->mailer = new \rsssl_mailer();
 
         return $this->mailer;
@@ -87,7 +91,7 @@ class EmailService
             'domain' => esc_url_raw(site_url()),
         ];
 
-        return wp_remote_post($this->app->config->getUrl('uri.rsp.mailinglist'), [
+        return wp_remote_post($this->uriConfig->getUrl('rsp.mailinglist'), [
             'timeout' => 15,
             'sslverify' => true,
             'body' => $payload

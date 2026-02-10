@@ -1,8 +1,9 @@
 <?php
 namespace ReallySimplePlugins\RSS\Core\Features\Onboarding;
 
-use ReallySimplePlugins\RSS\Core\Traits\HasNonces;
 use ReallySimplePlugins\RSS\Core\Bootstrap\App;
+use ReallySimplePlugins\RSS\Core\Support\Helpers\Storages\EnvironmentConfig;
+use ReallySimplePlugins\RSS\Core\Traits\HasNonces;
 use ReallySimplePlugins\RSS\Core\Services\EmailService;
 use ReallySimplePlugins\RSS\Core\Support\Helpers\Storage;
 use ReallySimplePlugins\RSS\Core\Interfaces\FeatureInterface;
@@ -16,17 +17,25 @@ class OnboardingController implements FeatureInterface
 {
     use HasNonces;
 
-    private App $app;
     private EmailService $emailService;
     private OnboardingFeatureService $service;
     private SecureSocketsService $sslService;
     private RelatedPluginService $pluginService;
     private SettingsConfigService $settingsService;
     private CertificateService $certificateService;
+	private EnvironmentConfig $env;
 
-    public function __construct(App $app, OnboardingFeatureService $service, SecureSocketsService $sslService, EmailService $emailService, RelatedPluginService $pluginService, SettingsConfigService $settingsService, CertificateService $certificateService)
+    public function __construct(
+		OnboardingFeatureService $service,
+		SecureSocketsService $sslService,
+		EmailService $emailService,
+		RelatedPluginService $pluginService,
+		SettingsConfigService $settingsService,
+		CertificateService $certificateService,
+        EnvironmentConfig $environmentConfig
+    )
     {
-        $this->app = $app;
+		$this->env = $environmentConfig;
         $this->service = $service;
         $this->sslService = $sslService;
         $this->emailService = $emailService;
@@ -39,7 +48,7 @@ class OnboardingController implements FeatureInterface
     {
         add_filter('rsssl_run_test', [$this, 'processOnboardingTest'], 10, 3);
         add_filter('rsssl_do_action', [$this, 'processOnboardingAction'], 10, 3);
-        add_action($this->app->config->getString('env.onboarding.queue_event'), [$this, 'processQueuedEvent']);
+        add_action($this->env->getString('onboarding.queue_event'), [$this, 'processQueuedEvent']);
     }
 
     /**
@@ -151,7 +160,7 @@ class OnboardingController implements FeatureInterface
 	    $isUpgradeFromFree = get_option('rsssl_free_deactivated');
 	    delete_option('rsssl_free_deactivated');
 
-        $stepsGenerator = $this->app->make(OnboardingStepsGenerator::class);
+        $stepsGenerator = App::getInstance()->make(OnboardingStepsGenerator::class);
         $onboardingSteps = $stepsGenerator->generate($isUpgradeFromFree);
 
         //if the user called with a refresh action, clear the cache

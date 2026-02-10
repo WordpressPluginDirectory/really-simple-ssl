@@ -22,7 +22,7 @@ class OnboardingLoader extends AbstractLoader
 	    // Enable if user clicked "Activate SSL" button
 	    // This allows the modal to fetch data when explicitly opened by user
 	    // after dismissal
-        if ($this->app->requestBody->getBoolean('activateSSLClicked')) {
+        if ($this->requestBody->getBoolean('activateSSLClicked')) {
             return true;
         }
 
@@ -59,7 +59,7 @@ class OnboardingLoader extends AbstractLoader
      */
     private function hasOnboardingQueueItems(): bool
     {
-        $items = get_option($this->app->config->getString('env.onboarding.queue_option'), []);
+        $items = get_option($this->env->getString('onboarding.queue_option'), []);
         return !empty($items);
     }
 

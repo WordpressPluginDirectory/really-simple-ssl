@@ -3,10 +3,11 @@
 namespace ReallySimplePlugins\RSS\Core\Managers;
 
 use ReallySimplePlugins\RSS\Core\Bootstrap\App;
+use ReallySimplePlugins\RSS\Core\Support\Helpers\Storages\EnvironmentConfig;
 
 abstract class AbstractManager
 {
-    protected App $app;
+	protected EnvironmentConfig $env;
 
     /**
      * Overwrite this property to true when the entries that the child Manager
@@ -25,9 +26,9 @@ abstract class AbstractManager
     /**
      * Bind the container
      */
-    public function __construct(App $app)
+    public function __construct(EnvironmentConfig $environmentConfig)
     {
-        $this->app = $app;
+		$this->env = $environmentConfig;
     }
 
     /**
@@ -63,7 +64,7 @@ abstract class AbstractManager
                 throw new \LogicException("Class must be a fully qualified name: " . esc_html($fullyClassifiedName));
             }
 
-            $class = $this->app->make($fullyClassifiedName, $this->useRegistry, $this->useRegistryForDependencies);
+            $class = App::getInstance()->make($fullyClassifiedName, $this->useRegistry, $this->useRegistryForDependencies);
 
             if ($this->isRegistrable($class) === false) {
                 throw new \LogicException("Class is not registrable: " . $fullyClassifiedName);

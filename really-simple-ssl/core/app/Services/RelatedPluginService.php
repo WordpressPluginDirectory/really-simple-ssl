@@ -6,24 +6,24 @@ namespace ReallySimplePlugins\RSS\Core\Services;
 
 use ReallySimplePlugins\RSS\Core\Bootstrap\App;
 use ReallySimplePlugins\RSS\Core\Support\Helpers\Storage;
+use ReallySimplePlugins\RSS\Core\Support\Helpers\Storages\RelatedConfig;
 
 final class RelatedPluginService
 {
     /**
      * Should be a Storage object based on one entry in the related config
      */
-    protected Storage $pluginConfig;
+    private Storage $pluginConfig;
+	private RelatedConfig $relatedConfig;
 
-    protected App $app;
-
-    public function __construct(App $app)
+    public function __construct(RelatedConfig $relatedConfig)
     {
-        $this->app = $app;
+		$this->relatedConfig = $relatedConfig;
     }
 
     public function setPluginConfigBySlug(string $slug): void
     {
-        $plugins = $this->app->config->get('related.plugins', []);
+        $plugins = $this->relatedConfig->get('plugins', []);
         $plugins = array_filter($plugins, static function($plugin) use ($slug){
             return isset($plugin['slug']) && ($plugin['slug'] === $slug);
         });
@@ -55,7 +55,7 @@ final class RelatedPluginService
     public function getOnboardingConfig(): array
     {
         $checkboxes = [];
-        $relatedPlugins = $this->app->config->get('related.plugins', []);
+        $relatedPlugins = $this->relatedConfig->get('plugins', []);
 
         foreach ($relatedPlugins as $config) {
             if (!isset($config['slug'], $config['title'])) {

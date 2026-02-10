@@ -12,16 +12,6 @@ use ReallySimplePlugins\RSS\Core\Support\Helpers\Storage;
  * dependencies in a structured and reusable way. This is important because it
  * decouples classes from concrete implementations (new..) and makes the
  * codebase easier to test and maintain.
- *
- * @property-read Storage $config Provided by {@see ConfigServiceProvider}
- * @property-read Storage $request Provided by {@see RequestServiceProvider}
- * @property-read Storage $files Provided by {@see RequestServiceProvider}
- * @property-read Storage $requestBody Provided by {@see RequestServiceProvider}
- *
- * @method static Storage config() Provided by {@see RequestServiceProvider}
- * @method static Storage request() Provided by {@see RequestServiceProvider}
- * @method static Storage files() Provided by {@see RequestServiceProvider}
- * @method static Storage requestBody() Provided by {@see RequestServiceProvider}
  */
 class App
 {
@@ -38,6 +28,14 @@ class App
      * @var array<string, \Closure>
      */
     private array $registry = [];
+
+    /**
+     * Instances of resolved services, indexed by identifier. Prevents
+     * duplicate instantiation when services are requested multiple times.
+     *
+     * @var array<string, object>
+     */
+    private array $instances = [];
 
     /**
      * Private constructor to enforce the singleton pattern. Prevents direct
@@ -69,17 +67,24 @@ class App
     }
 
     /**
-     * Resolve an identifier to an object instance. It first checks the registry
-     * for a factory. If none is found, it calls {@see make} to perform
-     * constructor autowiring.
+     * Resolve an identifier to an object instance. It first checks the
+     * instances cache, then the registry for a factory. If none is found, it
+     * calls {@see make} to perform constructor autowiring.
      *
      * @throws \Exception If the target is not instantiable or cannot resolve a dependency.
      * @throws \ReflectionException If reflection fails.
      */
     public function get(string $class): object
     {
+        if (array_key_exists($class, $this->instances)) {
+            return $this->instances[$class];
+        }
+
         if (array_key_exists($class, $this->registry)) {
-            return ($this->registry[$class])();
+            $instance = ($this->registry[$class])();
+            $this->instances[$class] = $instance;
+
+            return $instance;
         }
 
         return $this->make($class);
@@ -165,57 +170,31 @@ class App
             $dependencyClass = $type->getName();
 
             // Inject the current container, never a new one.
-            if ($dependencyClass === self::class) {
-                $arguments[] = $this;
-                continue;
-            }
+	        if ($dependencyClass === self::class) {
+		        throw new \Exception(sprintf(
+			        'Cannot resolve App container dependency for $%s in [%s] to prevent circular dependencies.',
+			        $parameter->getName(),
+			        $class
+		        ));
+	        }
+
 
             // Using get() will also resolve dependencies of dependencies
             $dependency = $this->get($dependencyClass);
 
-            // Dependencies are often for multi-use and therefor adding them
-            // to the registry is beneficial for speed
             if ($registerDependencies === true) {
-                $this->set($dependencyClass, static function() use ($dependency) {
-                    return $dependency;
-                });
+                $this->instances[$dependencyClass] = $dependency;
             }
 
-            $arguments[] = $this->get($dependencyClass);
+            $arguments[] = $dependency;
         }
 
         $made = new $class(...$arguments);
 
         if ($register) {
-            $this->set($class, static function() use ($made) {
-                return $made;
-            });
+            $this->instances[$class] = $made;
         }
 
         return $made;
-    }
-
-    /**
-     * Calls {@see get} immediately for unknown properties.
-     *
-     * @throws \Exception If the target is not instantiable.
-     * @throws \ReflectionException If reflection fails.
-     */
-    public function __get(string $name): object
-    {
-        return $this->get($name);
-    }
-
-    /**
-     * Helper method to be able to do static calls like so:
-     * Container::config->getString('env.plugin.name');
-     *
-     * Instead of:
-     * Container::getInstance()->config->getString('env.plugin.name');
-     */
-    public static function __callStatic(string $name, array $arguments = [])
-    {
-        $instance = self::getInstance();
-        return call_user_func([$instance, 'get'], $name);
     }
 }

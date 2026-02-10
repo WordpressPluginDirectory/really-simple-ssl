@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInite16c8ab67bf60a9e04303a69a741ce87
+class ComposerStaticInit8e35ff558754a0d14b9b074ba49d0b68
 {
     public static $files = array (
         'd767e4fc2dc52fe66584ab8c6684783e' => __DIR__ . '/..' . '/adbario/php-dot-notation/src/helpers.php',
@@ -72,9 +72,7 @@ class ComposerStaticInite16c8ab67bf60a9e04303a69a741ce87
         'ReallySimplePlugins\\RSS\\Core\\Managers\\EndpointManager' => __DIR__ . '/../..' . '/app/Managers/EndpointManager.php',
         'ReallySimplePlugins\\RSS\\Core\\Managers\\FeatureManager' => __DIR__ . '/../..' . '/app/Managers/FeatureManager.php',
         'ReallySimplePlugins\\RSS\\Core\\Managers\\ProviderManager' => __DIR__ . '/../..' . '/app/Managers/ProviderManager.php',
-        'ReallySimplePlugins\\RSS\\Core\\Providers\\ConfigServiceProvider' => __DIR__ . '/../..' . '/app/Providers/ConfigServiceProvider.php',
         'ReallySimplePlugins\\RSS\\Core\\Providers\\Provider' => __DIR__ . '/../..' . '/app/Providers/Provider.php',
-        'ReallySimplePlugins\\RSS\\Core\\Providers\\RequestServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RequestServiceProvider.php',
         'ReallySimplePlugins\\RSS\\Core\\Services\\CertificateService' => __DIR__ . '/../..' . '/app/Services/CertificateService.php',
         'ReallySimplePlugins\\RSS\\Core\\Services\\EmailService' => __DIR__ . '/../..' . '/app/Services/EmailService.php',
         'ReallySimplePlugins\\RSS\\Core\\Services\\GlobalOnboardingService' => __DIR__ . '/../..' . '/app/Services/GlobalOnboardingService.php',
@@ -82,6 +80,11 @@ class ComposerStaticInite16c8ab67bf60a9e04303a69a741ce87
         'ReallySimplePlugins\\RSS\\Core\\Services\\SecureSocketsService' => __DIR__ . '/../..' . '/app/Services/SecureSocketsService.php',
         'ReallySimplePlugins\\RSS\\Core\\Services\\SettingsConfigService' => __DIR__ . '/../..' . '/app/Services/SettingsConfigService.php',
         'ReallySimplePlugins\\RSS\\Core\\Support\\Helpers\\Storage' => __DIR__ . '/../..' . '/app/Support/Helpers/Storage.php',
+        'ReallySimplePlugins\\RSS\\Core\\Support\\Helpers\\Storages\\EnvironmentConfig' => __DIR__ . '/../..' . '/app/Support/Helpers/Storages/EnvironmentConfig.php',
+        'ReallySimplePlugins\\RSS\\Core\\Support\\Helpers\\Storages\\RelatedConfig' => __DIR__ . '/../..' . '/app/Support/Helpers/Storages/RelatedConfig.php',
+        'ReallySimplePlugins\\RSS\\Core\\Support\\Helpers\\Storages\\RequestBody' => __DIR__ . '/../..' . '/app/Support/Helpers/Storages/RequestBody.php',
+        'ReallySimplePlugins\\RSS\\Core\\Support\\Helpers\\Storages\\RequestStorage' => __DIR__ . '/../..' . '/app/Support/Helpers/Storages/RequestStorage.php',
+        'ReallySimplePlugins\\RSS\\Core\\Support\\Helpers\\Storages\\UriConfig' => __DIR__ . '/../..' . '/app/Support/Helpers/Storages/UriConfig.php',
         'ReallySimplePlugins\\RSS\\Core\\Support\\Utility\\StringUtility' => __DIR__ . '/../..' . '/app/Support/Utility/StringUtility.php',
         'ReallySimplePlugins\\RSS\\Core\\Traits\\HasAllowlistControl' => __DIR__ . '/../..' . '/app/Traits/HasAllowlistControl.php',
         'ReallySimplePlugins\\RSS\\Core\\Traits\\HasEncryption' => __DIR__ . '/../..' . '/app/Traits/HasEncryption.php',
@@ -92,9 +95,9 @@ class ComposerStaticInite16c8ab67bf60a9e04303a69a741ce87
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInite16c8ab67bf60a9e04303a69a741ce87::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInite16c8ab67bf60a9e04303a69a741ce87::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInite16c8ab67bf60a9e04303a69a741ce87::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit8e35ff558754a0d14b9b074ba49d0b68::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit8e35ff558754a0d14b9b074ba49d0b68::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit8e35ff558754a0d14b9b074ba49d0b68::$classMap;
 
         }, null, ClassLoader::class);
     }

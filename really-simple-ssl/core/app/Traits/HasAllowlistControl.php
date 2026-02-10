@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace ReallySimplePlugins\RSS\Core\Traits;
 
 use ReallySimplePlugins\RSS\Core\Bootstrap\App;
+use ReallySimplePlugins\RSS\Core\Support\Helpers\Storages\EnvironmentConfig;
 
 trait HasAllowlistControl
 {
@@ -45,7 +46,8 @@ trait HasAllowlistControl
      */
     public function restRequestIsAllowed(): bool
     {
-        $pluginNamespace = App::config()->getString('env.http.namespace');
+        $env = App::getInstance()->get(EnvironmentConfig::class);
+        $pluginNamespace = $env->getString('http.namespace');
 
         $validWpJsonRequest = (
             isset($_SERVER['REQUEST_URI'])

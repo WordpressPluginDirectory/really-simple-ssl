@@ -276,8 +276,8 @@ class rsssl_admin {
 		$current_date = strtotime( gmdate( 'Y-m-d H:i:s' ) );
 
 		// Define the start and end dates for the range in GMT (including specific times)
-		$start_date = strtotime( 'November 24 2025 00:00:00 GMT' );
-		$end_date   = strtotime( 'December 1 2025 23:59:59 GMT' );
+		$start_date = strtotime( 'November 23 2026 00:00:00 GMT' );
+		$end_date   = strtotime( 'November 30 2026 23:59:59 GMT' );
 
 		// Check if the current date and time falls within the date range
 		if ( $current_date >= $start_date && $current_date <= $end_date ) {

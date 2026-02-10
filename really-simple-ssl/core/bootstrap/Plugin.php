@@ -8,10 +8,12 @@ use ReallySimplePlugins\RSS\Core\Managers\FeatureManager;
 use ReallySimplePlugins\RSS\Core\Managers\ProviderManager;
 use ReallySimplePlugins\RSS\Core\Managers\EndpointManager;
 use ReallySimplePlugins\RSS\Core\Managers\ControllerManager;
+use ReallySimplePlugins\RSS\Core\Support\Helpers\Storages\EnvironmentConfig;
 
 class Plugin
 {
     private App $app;
+	private EnvironmentConfig $env;
     private FeatureManager $featureManager;
     private ProviderManager $providerManager;
     private EndpointManager $endpointManager;
@@ -23,12 +25,12 @@ class Plugin
     public function __construct()
     {
         $this->app = App::getInstance();
+		$this->env = new EnvironmentConfig();
 
-        // todo - should these be added to the container too? Rather not tho
-        $this->featureManager = new FeatureManager($this->app);
-        $this->providerManager = new ProviderManager($this->app);
-        $this->controllerManager = new ControllerManager($this->app);
-        $this->endpointManager = new EndpointManager($this->app);
+        $this->featureManager = $this->app->make(FeatureManager::class);
+        $this->providerManager = $this->app->make(ProviderManager::class);
+        $this->controllerManager = $this->app->make(ControllerManager::class);
+        $this->endpointManager = $this->app->make(EndpointManager::class);
     }
 
     /**
@@ -74,7 +76,7 @@ class Plugin
      */
     public function loadPluginTextDomain(): void
     {
-        load_plugin_textdomain('really-simple-ssl', false, $this->app->config->getString('env.plugin.lang_path'));
+        load_plugin_textdomain('really-simple-ssl', false, $this->env->getString('plugin.lang_path'));
     }
 
     /**
@@ -143,8 +145,8 @@ class Plugin
     public function registerProviders(): void
     {
         $this->providerManager->register([
-            \ReallySimplePlugins\RSS\Core\Providers\ConfigServiceProvider::class,
-            \ReallySimplePlugins\RSS\Core\Providers\RequestServiceProvider::class,
+//            \ReallySimplePlugins\RSS\Core\Providers\ConfigServiceProvider::class,
+//            \ReallySimplePlugins\RSS\Core\Providers\RequestServiceProvider::class,
         ]);
     }
 

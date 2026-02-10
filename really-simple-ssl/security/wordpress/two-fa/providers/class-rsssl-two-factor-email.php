@@ -377,11 +377,9 @@ class Rsssl_Two_Factor_Email extends Rsssl_Two_Factor_Provider implements Rsssl_
 		<p>
 			<label for="rsssl-authcode"><?php esc_html_e( 'Verification Code:', 'really-simple-ssl' ); ?></label>
 			<input type="text" inputmode="numeric" name="rsssl-two-factor-email-code" id="rsssl-authcode" class="input rsssl-authcode" value="" size="20" pattern="[0-9 ]*" placeholder="1234 5678" data-digits="8" />
-			<?php submit_button( __( 'Log In', 'really-simple-ssl' ) ); ?>
 		</p>
-		<p class="rsssl-two-factor-email-resend">
-			<input type="submit" class="button" name="<?php echo esc_attr( self::RSSSL_INPUT_NAME_RESEND_CODE ); ?>" value="<?php esc_attr_e( 'Resend Code', 'really-simple-ssl' ); ?>" />
-		</p>
+		<?php submit_button( __( 'Log In', 'really-simple-ssl' ), 'primary', 'submit' ); ?>
+		<?php submit_button( __( 'Resend Code', 'really-simple-ssl' ), 'secondary', self::RSSSL_INPUT_NAME_RESEND_CODE ); ?>
 		<script type="text/javascript">
 			setTimeout( function(){
 				var d;

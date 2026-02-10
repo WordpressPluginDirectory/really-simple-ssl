@@ -158,17 +158,9 @@ return array(
 		'version' => 'dev-main',
 		'path'    => $baseDir . '/app/Managers/ProviderManager.php'
 	),
-	'ReallySimplePlugins\\RSS\\Core\\Providers\\ConfigServiceProvider' => array(
-		'version' => 'dev-main',
-		'path'    => $baseDir . '/app/Providers/ConfigServiceProvider.php'
-	),
 	'ReallySimplePlugins\\RSS\\Core\\Providers\\Provider' => array(
 		'version' => 'dev-main',
 		'path'    => $baseDir . '/app/Providers/Provider.php'
-	),
-	'ReallySimplePlugins\\RSS\\Core\\Providers\\RequestServiceProvider' => array(
-		'version' => 'dev-main',
-		'path'    => $baseDir . '/app/Providers/RequestServiceProvider.php'
 	),
 	'ReallySimplePlugins\\RSS\\Core\\Services\\CertificateService' => array(
 		'version' => 'dev-main',
@@ -197,6 +189,26 @@ return array(
 	'ReallySimplePlugins\\RSS\\Core\\Support\\Helpers\\Storage' => array(
 		'version' => 'dev-main',
 		'path'    => $baseDir . '/app/Support/Helpers/Storage.php'
+	),
+	'ReallySimplePlugins\\RSS\\Core\\Support\\Helpers\\Storages\\EnvironmentConfig' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/app/Support/Helpers/Storages/EnvironmentConfig.php'
+	),
+	'ReallySimplePlugins\\RSS\\Core\\Support\\Helpers\\Storages\\RelatedConfig' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/app/Support/Helpers/Storages/RelatedConfig.php'
+	),
+	'ReallySimplePlugins\\RSS\\Core\\Support\\Helpers\\Storages\\RequestBody' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/app/Support/Helpers/Storages/RequestBody.php'
+	),
+	'ReallySimplePlugins\\RSS\\Core\\Support\\Helpers\\Storages\\RequestStorage' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/app/Support/Helpers/Storages/RequestStorage.php'
+	),
+	'ReallySimplePlugins\\RSS\\Core\\Support\\Helpers\\Storages\\UriConfig' => array(
+		'version' => 'dev-main',
+		'path'    => $baseDir . '/app/Support/Helpers/Storages/UriConfig.php'
 	),
 	'ReallySimplePlugins\\RSS\\Core\\Support\\Utility\\StringUtility' => array(
 		'version' => 'dev-main',

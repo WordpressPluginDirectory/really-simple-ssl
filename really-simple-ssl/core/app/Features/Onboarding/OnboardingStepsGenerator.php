@@ -8,20 +8,27 @@ use ReallySimplePlugins\RSS\Core\Bootstrap\App;
 use ReallySimplePlugins\RSS\Core\Services\CertificateService;
 use ReallySimplePlugins\RSS\Core\Services\RelatedPluginService;
 use ReallySimplePlugins\RSS\Core\Services\SettingsConfigService;
+use ReallySimplePlugins\RSS\Core\Support\Helpers\Storages\EnvironmentConfig;
+use ReallySimplePlugins\RSS\Core\Support\Helpers\Storages\UriConfig;
 
 class OnboardingStepsGenerator
 {
     public array $steps = [];
     private bool $proPluginEnabled;
 
-    private App $app;
     private RelatedPluginService $pluginService;
     private SettingsConfigService $settingsService;
     private CertificateService $certificateService;
+	private UriConfig $uriConfig;
 
-    public function __construct(App $app, RelatedPluginService $pluginService, SettingsConfigService $settingsService, CertificateService $certificateService)
+    public function __construct(
+		RelatedPluginService $pluginService,
+		SettingsConfigService $settingsService,
+		CertificateService $certificateService,
+	    UriConfig $uriConfig
+    )
     {
-        $this->app = $app;
+		$this->uriConfig = $uriConfig;
         $this->pluginService = $pluginService;
         $this->settingsService = $settingsService;
         $this->certificateService = $certificateService;
@@ -142,7 +149,7 @@ class OnboardingStepsGenerator
         if ($this->proPluginEnabled === false) {
             $subtitle .= ' ' . sprintf(
                     wp_kses_post(__('Please %sconsider upgrading to Pro%s to enjoy all simple and performant security features.', 'really-simple-ssl')),
-                    '<a href="' . $this->app->config->getUrl('uri.rsp.upgrade_from_free') . '" target="_blank">',
+                    '<a href="' . $this->uriConfig->getUrl('rsp.upgrade_from_free') . '" target="_blank">',
                     '</a>'
                 );
         }

@@ -6,14 +6,15 @@ namespace ReallySimplePlugins\RSS\Core\Controllers;
 
 use ReallySimplePlugins\RSS\Core\Bootstrap\App;
 use ReallySimplePlugins\RSS\Core\Interfaces\ControllerInterface;
+use ReallySimplePlugins\RSS\Core\Support\Helpers\Storages\EnvironmentConfig;
 
 class DashboardController implements ControllerInterface
 {
-    protected App $app;
+	protected EnvironmentConfig $env;
 
-    public function __construct(App $app)
+    public function __construct(EnvironmentConfig $environmentConfig)
     {
-        $this->app = $app;
+		$this->env = $environmentConfig;
     }
 
     public function register(): void
@@ -36,7 +37,7 @@ class DashboardController implements ControllerInterface
             return;
         }
 
-        wp_safe_redirect($this->app->config->getUrl('env.plugin.dashboard_url'));
+        wp_safe_redirect($this->env->getUrl('plugin.dashboard_url'));
         exit;
     }
 }
